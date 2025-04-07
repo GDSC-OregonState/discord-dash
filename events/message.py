@@ -12,9 +12,11 @@ class Message(commands.Cog):
             return
         if message.content.lower() == "hello bot":
             await message.channel.send(f"Hello {message.author.name}")
-        if "add-user" in message.content.lower() and len(message.content.lower() > 1):
-            username = message.content.lower().split(" ")[1]
-            await message.channel.send(mycommands.add_user(username))
+        if "add-user" in message.content.lower():
+            component_parts = message.content.lower().split(" ")
+            if (len(component_parts) > 1):
+                username = component_parts[1]
+                await message.channel.send(mycommands.add_user(username))
         else:
             await message.channel.send(mycommands.help())
 
