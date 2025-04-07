@@ -6,6 +6,6 @@ command_message = [
 def help():
     message = "Help Menu:\n\n"
     for data in command_message:
-        header += f"\t- {data[0]}: {data[1]}\n"
+        message += f"\t- {data[0]}: {data[1]}\n"
 
     return message

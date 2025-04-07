@@ -1,4 +1,5 @@
-import commands as mycommands
+from commands.add_user import add_user
+from commands.help import help
 
 from discord.ext import commands
 
@@ -16,9 +17,9 @@ class Message(commands.Cog):
             component_parts = message.content.lower().split(" ")
             if (len(component_parts) > 1):
                 username = component_parts[1]
-                await message.channel.send(mycommands.add_user(username))
+                await message.channel.send(add_user(username))
         else:
-            await message.channel.send(mycommands.help())
+            await message.channel.send(help())
 
 async def setup(bot):
     await bot.add_cog(Message(bot))
