@@ -4,7 +4,7 @@ services:
   discord-dash:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: ${DOCKERFILE:-Dockerfile}
     environment:
       - DISCORD_TOKEN=${DISCORD_TOKEN}
       - GENERAL_CHAT_ID=${GENERAL_CHAT_ID}
