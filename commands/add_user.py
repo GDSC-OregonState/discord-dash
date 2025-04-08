@@ -14,6 +14,6 @@ def add_user(username):
     response = requests.put(url, headers=headers, json=json)
 
     if (response.status_code == 200):
-        return f"User: {username} was added to the Github Org!!"
+        return f"User: {username} has received an invitation to the Github Org!!"
     else:
         return f"Failed to add user!! This was due to the following reasons: {response.json()}"
