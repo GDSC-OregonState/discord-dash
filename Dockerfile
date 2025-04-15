@@ -10,8 +10,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the bot code into the container
 COPY . .
 
-# Set environment variables (optional, can be overridden at runtime)
-ENV TOKEN="your-discord-bot-token-here"
-
 # Run the bot
 CMD ["python", "bot.py"]

@@ -16,6 +16,7 @@ class Bot(commands.Bot):
     
     
     async def setup_hook(self):
+        await self.load_extension("commands.add_user")
         await self.load_extension("events.ready")
         await self.load_extension("events.message")
 if TOKEN:

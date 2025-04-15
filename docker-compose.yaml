@@ -5,6 +5,5 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    environment:
-      - DISCORD_TOKEN=${DISCORD_TOKEN}
-      - GENERAL_CHAT_ID=${GENERAL_CHAT_ID}
+    env_file:
+    - ./.env
