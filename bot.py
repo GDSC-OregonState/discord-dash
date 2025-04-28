@@ -16,8 +16,14 @@ class Bot(commands.Bot):
     
     
     async def setup_hook(self):
+        #commands
+        await self.load_extension("commands.ping")
+        await self.load_extension("commands.helper")
+
+        #Events
         await self.load_extension("events.ready")
         await self.load_extension("events.message")
+        
 if TOKEN:
     Bot().run(TOKEN)
 else:
