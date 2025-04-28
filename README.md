@@ -65,6 +65,20 @@ Replace `your-bot-token` with your actual Discord bot token.
 
 ### 3. Running the bot
 
+#### Using Docker
+
+1. Build the Docker image:
+
+```sh
+docker build -t discord-dash .
+```
+
+2. Run the container:
+
+```sh
+docker run --env-file .env discord-dash
+```
+
 ## Docker Compose (Recommended Setup)
 
 Since the repository already contains the `Dockerfile` and `docker-compose.yml`, you can start the bot easily using Docker Compose.

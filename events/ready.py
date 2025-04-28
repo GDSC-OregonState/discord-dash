@@ -9,6 +9,8 @@ class Ready(commands.Cog):
         channelId = int(os.getenv("GENERAL_CHAT_ID"))
         await self.bot.get_channel(channelId).send(readyMsg)
 
+        
+
 
 async def setup(bot):
     await bot.add_cog(Ready(bot))
