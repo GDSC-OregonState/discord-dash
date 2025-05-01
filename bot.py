@@ -19,6 +19,7 @@ class Bot(commands.Bot):
         #commands
         await self.load_extension("commands.ping")
         await self.load_extension("commands.helper")
+        await self.load_extension("commands.fun")
 
         #Events
         await self.load_extension("events.ready")
